@@ -159,3 +159,87 @@ li:hover {
 .nav-links a:hover {
     color: #38bdf8;
 }
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    margin-top: 30px;
+
+    width: 80%;
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, rgba(56,189,248,0.25), rgba(0,0,0,0.2));
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* ===== HERO BUTTONS ===== */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    color: white;
+
+    background: #38bdf8;
+    padding: 12px 18px;
+
+    margin: 5px;
+    border-radius: 10px;
+
+    display: inline-block;
+    transition: 0.2s;
+}
+.hero-buttons a:last-child {
+    background: #22c55e;
+}
+
+.hero-buttons a:last-child:hover {
+    background: #16a34a;
+}
+
+.hero-buttons a:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+
+    .hero, section, header {
+        width: 95%;
+        margin: 10px;
+    }
+
+    header h1, .hero h1 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons a {
+        display: block;
+        margin: 10px 0;
+    }
+}
