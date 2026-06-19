@@ -1,10 +1,13 @@
+/* ===== GLOBAL ===== */
 html {
     scroll-behavior: smooth;
 }
 
 * {
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,161 +20,7 @@ body {
     align-items: center;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 70px 20px;
-    margin-top: 30px;
-
-    width: 80%;
-    border-radius: 15px;
-
-    background: linear-gradient(135deg, rgba(56,189,248,0.2), rgba(0,0,0,0.2));
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-header h1 {
-    font-size: 40px;
-    margin: 0;
-}
-
-header p {
-    color: #cbd5e1;
-    font-size: 18px;
-}
-
-/* Sections */
-section {
-    background: rgba(255, 255, 255, 0.05);
-
-    margin: 15px;
-    padding: 25px;
-
-    width: 80%;
-    border-radius: 12px;
-
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-
-    transition: 0.3s;
-}
-section:hover {
-    transform: translateY(-3px);
-}
-
-/* Headings */
-h2 {
-    color: #38bdf8;
-}
-
-/* Lists */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background: rgba(255,255,255,0.1);
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* Hover effect */
-li:hover {
-    background: rgba(56,189,248,0.3);
-    transform: scale(1.02);
-    transition: 0.2s;
-}
-.buttons {
-    margin-top: 15px;
-}
-
-.buttons a {
-    text-decoration: none;
-    color: white;
-    background: #38bdf8;
-    padding: 10px 15px;
-    margin-right: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    transition: 0.2s;
-}
-
-.buttons a:hover {
-    background: #0ea5e9;
-    transform: scale(1.05);
-}
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 20px;
-    border-radius: 12px;
-
-    text-align: center;
-
-    transition: 0.3s;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-    color: white;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    background: rgba(56, 189, 248, 0.2);
-}
-.card h3 {
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-size: 13px;
-    color: #cbd5e1;
-    margin-bottom: 15px;
-}
-.card-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.card-buttons a {
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    color: white;
-    transition: 0.2s;
-}
-.card-buttons a:first-child {
-    background: #3b82f6; /* GitHub */
-}
-
-.card-buttons a:last-child {
-    background: #22c55e; /* Live Demo */
-}
-
-.card-buttons a:hover {
-    transform: scale(1.05);
-}
-.card {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-.card:hover {
-    transform: translateY(-6px);
-    background: rgba(56, 189, 248, 0.25);
-}
+/* ===== NAVBAR ===== */
 .navbar {
     width: 80%;
     margin-top: 20px;
@@ -183,25 +32,24 @@ li:hover {
     padding: 15px 20px;
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow:
+        0 0 10px rgba(56, 189, 248, 0.3),
+        0 0 25px rgba(56, 189, 248, 0.15),
+        0 5px 20px rgba(0,0,0,0.3);
 
     position: sticky;
     top: 10px;
-    z-index: 1000;   /* IMPORTANT */
+    z-index: 1000;
 }
-.navbar {
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3),
-                0 0 25px rgba(56, 189, 248, 0.15),
-                0 5px 20px rgba(0,0,0,0.3);
-}
+
 .navbar:hover {
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5),
-                0 0 35px rgba(56, 189, 248, 0.25),
-                0 5px 25px rgba(0,0,0,0.4);
-    transition: 0.3s;
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, 0.5),
+        0 0 35px rgba(56, 189, 248, 0.25),
+        0 5px 25px rgba(0,0,0,0.4);
 }
 
 .logo {
@@ -214,13 +62,13 @@ li:hover {
     color: white;
     text-decoration: none;
     margin-left: 15px;
-    transition: 0.2s;
 }
 
 .nav-links a:hover {
     color: #38bdf8;
 }
-/* ===== HERO SECTION ===== */
+
+/* ===== HERO ===== */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -261,8 +109,13 @@ li:hover {
     border-radius: 10px;
 
     display: inline-block;
-    transition: 0.2s;
 }
+
+.hero-buttons a:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
 .hero-buttons a:last-child {
     background: #22c55e;
 }
@@ -271,18 +124,146 @@ li:hover {
     background: #16a34a;
 }
 
-.hero-buttons a:hover {
+/* ===== SECTIONS ===== */
+section {
+    background: rgba(255, 255, 255, 0.05);
+
+    margin: 15px;
+    padding: 25px;
+
+    width: 80%;
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: #38bdf8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* ===== LISTS ===== */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255,255,255,0.1);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+li:hover {
+    background: rgba(56,189,248,0.3);
+    transform: scale(1.02);
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+    margin-top: 15px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    background: #38bdf8;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.buttons a:hover {
     background: #0ea5e9;
     transform: scale(1.05);
 }
+
+/* ===== PROJECTS GRID ===== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* ===== PROJECT CARD ===== */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(56, 189, 248, 0.18);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+/* ===== CARD BUTTONS ===== */
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-buttons a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: white;
+}
+
+.card-buttons a:first-child {
+    background: #3b82f6;
+}
+
+.card-buttons a:last-child {
+    background: #22c55e;
+}
+
+.card-buttons a:hover {
+    transform: scale(1.05);
+}
+
+/* ===== CONTACT BUTTONS ===== */
+.buttons a {
+    background: #38bdf8;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-    .hero, section, header {
+    .hero, section, .navbar {
         width: 95%;
-        margin: 10px;
     }
 
-    header h1, .hero h1 {
+    .hero h1 {
         font-size: 28px;
     }
 
@@ -304,11 +285,8 @@ li:hover {
         margin: 10px 0;
     }
 }
-/* ===== FADE ANIMATION ===== */
-section, header {
-    animation: fadeIn 0.8s ease-in-out;
-}
 
+/* ===== FADE ANIMATION ===== */
 @keyframes fadeIn {
     from {
         opacity: 0;
